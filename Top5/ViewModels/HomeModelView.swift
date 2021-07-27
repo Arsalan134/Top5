@@ -26,7 +26,7 @@ class HomeViewModel: ObservableObject {
         
         recommendationProgressState = .loading
         
-        let url = "https://api.skypicker.com/flights?v=3&sort=popularity&asc=0&locale=en&daysInDestinationFrom&daysInDestinationTo&affilid=mainsolution1&children=0&infants=0&flyFrom=49.2-16.61-250km&to=anywhere&featureName=aggregateResults&dateFrom=06%2F09%2F2021&dateTo=06%2F09%2F2021&typeFlight=oneway&returnFrom&returnTo&one_per_date=0&oneforcity=1&wait_for_refresh=0&adults=1&limit=5&partner=skypicker"
+        let url = "https://api.skypicker.com/flights?v=3&sort=popularity&asc=0&locale=en&daysInDestinationFrom&daysInDestinationTo&affilid=mainsolution1&children=0&infants=0&flyFrom=49.2-16.61-250km&to=anywhere&featureName=aggregateResults&dateFrom=06%2F09%2F2021&dateTo=06%2F09%2F2021&typeFlight=oneway&one_per_date=0&oneforcity=1&wait_for_refresh=0&adults=1&limit=5&partner=skypicker"
         
         NetworkManager.shared.dataRequest(with: url, objectType: RecRequest.self) { [weak self] result in
             DispatchQueue.main.async {

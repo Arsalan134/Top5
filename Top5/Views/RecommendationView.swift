@@ -11,19 +11,31 @@ import UIKit
 struct RecommendationView: View {
     
     var recommendation: Recommendation
-        
+    
     @State var image: UIImage
     
     var body: some View {
-        VStack {
+        VStack(spacing: 5) {
             
             Spacer()
             
-            Image(uiImage: image)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .cornerRadius(7)
-                .padding(.top, 10)
+            ZStack(alignment: .topTrailing) {
+                Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                
+                Text("\(Int(recommendation.price ?? 0)) €")
+                    .font(.title3)
+                    .foregroundColor(.white)
+                    .padding(10)
+                    .frame(minWidth: 60)
+                    .background(Color.green)
+                
+            }
+            .cornerRadius(7)
+            .padding(.top, 10)
+            .shadow(radius: 10, x: 5, y: 10)
+            
             
             Spacer()
             
