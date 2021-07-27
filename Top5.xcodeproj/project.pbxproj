@@ -15,6 +15,8 @@
 		99D7998026B01B3A00265C19 /* Top5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99D7997E26B01B3A00265C19 /* Top5.xcdatamodeld */; };
 		99D7998B26B01B3B00265C19 /* Top5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D7998A26B01B3B00265C19 /* Top5Tests.swift */; };
 		99D7999626B01B3B00265C19 /* Top5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D7999526B01B3B00265C19 /* Top5UITests.swift */; };
+		99D799A926B051C500265C19 /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D799A826B051C500265C19 /* Recommendation.swift */; };
+		99D799AB26B0523200265C19 /* RecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D799AA26B0523200265C19 /* RecommendationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		99D7999126B01B3B00265C19 /* Top5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Top5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D7999526B01B3B00265C19 /* Top5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top5UITests.swift; sourceTree = "<group>"; };
 		99D7999726B01B3B00265C19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99D799A826B051C500265C19 /* Recommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
+		99D799AA26B0523200265C19 /* RecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,10 @@
 		99D7997226B01B3700265C19 /* Top5 */ = {
 			isa = PBXGroup;
 			children = (
+				99D799A726B0515B00265C19 /* ViewModels */,
+				99D799A626B0515600265C19 /* Models */,
+				99D799A526B0514C00265C19 /* Views */,
 				99D7997326B01B3700265C19 /* Top5App.swift */,
-				99D7997526B01B3700265C19 /* ContentView.swift */,
 				99D7997726B01B3A00265C19 /* Assets.xcassets */,
 				99D7997C26B01B3A00265C19 /* Persistence.swift */,
 				99D7998126B01B3A00265C19 /* Info.plist */,
@@ -134,6 +140,30 @@
 				99D7999726B01B3B00265C19 /* Info.plist */,
 			);
 			path = Top5UITests;
+			sourceTree = "<group>";
+		};
+		99D799A526B0514C00265C19 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99D7997526B01B3700265C19 /* ContentView.swift */,
+				99D799AA26B0523200265C19 /* RecommendationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99D799A626B0515600265C19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				99D799A826B051C500265C19 /* Recommendation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		99D799A726B0515B00265C19 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +295,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99D799A926B051C500265C19 /* Recommendation.swift in Sources */,
+				99D799AB26B0523200265C19 /* RecommendationView.swift in Sources */,
 				99D7997D26B01B3A00265C19 /* Persistence.swift in Sources */,
 				99D7998026B01B3A00265C19 /* Top5.xcdatamodeld in Sources */,
 				99D7997626B01B3700265C19 /* ContentView.swift in Sources */,
