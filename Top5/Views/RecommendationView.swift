@@ -100,8 +100,8 @@ struct RecommendationView: View {
     
 }
 
-struct RecommendationView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecommendationView(recommendation: Recommendation(name: "Test"))
-    }
-}
+//struct RecommendationView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RecommendationView(recommendation: Recommendation(name: "Test"))
+//    }
+//}

@@ -1,14 +1,17 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  Top5
 //
-//  Created by Arsalan Iravani on 27.07.2021.
+//  Created by Arsalan Iravani on 26.07.2021.
 //
 
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct HomeView: View {
+    
+    @ObservedObject var vm = HomeViewModel()
+    
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(
@@ -16,20 +19,16 @@ struct ContentView: View {
         animation: .default)
     private var items: FetchedResults<Item>
     
-    let recommendations: [Recommendation] = [
-        Recommendation(name: "salam"),
-        Recommendation(name: "necesen"),
-        Recommendation(name: "yaxshiyam"),
-        Recommendation(name: "salam"),
-        Recommendation(name: "necesen"),
-    ]
-    
+   
     var body: some View {
         NavigationView {
-            List(recommendations) { recommendation in
+            List(vm.recommendations) { recommendation in
                 RecommendationView(recommendation: recommendation)
             }
             .navigationTitle("Flight Offers ✈️")
+        }
+        .onAppear {
+            vm.downloadRecommendations()
         }
     }
 
@@ -72,8 +71,8 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        HomeView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
