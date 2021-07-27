@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct RecommendationView: View {
     
     var recommendation: Recommendation
@@ -26,12 +25,11 @@ struct RecommendationView: View {
             
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Baku")
+                    Text(recommendation.cityFrom ?? "")
                         .foregroundColor(.gray)
                     
-                    Text("GYD")
+                    Text(recommendation.cityCodeFrom ?? "")
                         .font(.largeTitle)
-                    
                 }
                 
                 Spacer()
@@ -43,10 +41,10 @@ struct RecommendationView: View {
                 Spacer()
                 
                 VStack(alignment: .trailing) {
-                    Text("Prague")
+                    Text(recommendation.cityTo ?? "")
                         .foregroundColor(.gray)
                     
-                    Text("PRG")
+                    Text(recommendation.cityCodeTo ?? "")
                         .font(.largeTitle)
                 }
             }
@@ -58,7 +56,7 @@ struct RecommendationView: View {
                     Text("Date")
                         .foregroundColor(.gray)
                     
-                    Text("Sep 13")
+                    Text(unixDateToDateString(recommendation.dTimeUTC))
                 }
                 
                 Spacer()
@@ -67,7 +65,7 @@ struct RecommendationView: View {
                     Text("Flight")
                         .foregroundColor(.gray)
                     
-                    Text("J2 109")
+                    Text(flightNumbersStringFromRoute(recommendation.route))
                 }
                 
                 Spacer()
@@ -76,7 +74,7 @@ struct RecommendationView: View {
                     Text("Departure")
                         .foregroundColor(.gray)
                     
-                    Text("07:00")
+                    Text(unixDateToTimeString(recommendation.dTimeUTC))
                 }
                 
                 Spacer()
@@ -85,7 +83,7 @@ struct RecommendationView: View {
                     Text("Arrival")
                         .foregroundColor(.gray)
                     
-                    Text("09:30")
+                    Text(unixDateToTimeString(recommendation.aTimeUTC))
                 }
                 
                 
