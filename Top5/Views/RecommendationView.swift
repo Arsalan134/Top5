@@ -6,20 +6,24 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct RecommendationView: View {
     
     var recommendation: Recommendation
+        
+    @State var image: UIImage
     
     var body: some View {
         VStack {
             
             Spacer()
             
-            Image("london")
+            Image(uiImage: image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .cornerRadius(7)
+                .padding(.top, 10)
             
             Spacer()
             
@@ -51,7 +55,7 @@ struct RecommendationView: View {
             
             Spacer()
             
-            HStack {
+            HStack(alignment: .top) {
                 VStack(alignment: .leading) {
                     Text("Date")
                         .foregroundColor(.gray)
@@ -85,14 +89,23 @@ struct RecommendationView: View {
                     
                     Text(unixDateToTimeString(recommendation.aTimeUTC))
                 }
-                
-                
-                
             }
+            .padding(.bottom, 20)
             
             Spacer()
             
+        }.onAppear {
+            
+            loadUIImage(from: "https://images.kiwi.com/photos/600x330/\(recommendation.mapIdto ?? "").jpg") { result in
+                switch result {
+                case .success(let image):
+                    self.image = image
+                case .failure(_):
+                    print()
+                }
+            }
         }
+        
         
     }
     

@@ -23,9 +23,9 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             List(vm.recommendations) { recommendation in
-                RecommendationView(recommendation: recommendation)
+                RecommendationView(recommendation: recommendation, image: UIImage())
             }
-            .navigationTitle("Flight Offers ✈️")
+            .navigationTitle("✈️ Flight Offers ")
         }
         .onAppear {
             vm.downloadRecommendations()
