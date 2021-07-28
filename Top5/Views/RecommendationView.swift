@@ -81,7 +81,7 @@ struct RecommendationView: View {
                     Text("Flight")
                         .foregroundColor(.gray)
                     
-                    Text(flightNumbersStringFromRoute(recommendation.route))
+                    Text(recommendation.route?.count == 1 ? (recommendation.route?.first?.operating_carrier ?? "") + " " + ("\(recommendation.route?.first?.flight_no ?? 9999)" ) :  recommendation.route?.isEmpty ?? true ? "-" : "Multiple")
                 }
                 
                 Spacer()
