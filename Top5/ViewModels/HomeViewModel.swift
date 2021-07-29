@@ -37,7 +37,14 @@ class HomeViewModel: ObservableObject {
         let month = calendar.component(.month, from: date)
         let year = calendar.component(.year, from: date)
         
-        let url = "https://api.skypicker.com/flights?v=3&sort=popularity&asc=0&locale=en&daysInDestinationFrom&daysInDestinationTo&affilid=mainsolution1&children=0&infants=0&flyFrom=49.2-16.61-250km&to=anywhere&featureName=aggregateResults&dateFrom=\(day)%2F\(month)%2F\(year)&dateTo=\(day)%2F\(month)%2F\(year)&typeFlight=oneway&one_per_date=0&oneforcity=1&wait_for_refresh=0&adults=1&limit=5&partner=skypicker"
+        let nextDate = Date(timeInterval: 86400, since: date) // next day, 86400 seconds = 1 day
+        let nextDay = calendar.component(.day, from: nextDate)
+        let nextMonth = calendar.component(.month, from: nextDate)
+        let nextYear = calendar.component(.year, from: nextDate)
+        
+        let url = "https://api.skypicker.com/flights?v=3&sort=popularity&asc=0&locale=en&daysInDestinationFrom&daysInDestinationTo&affilid=mainsolution1&children=0&infants=0&flyFrom=49.2-16.61-250km&to=anywhere&featureName=aggregateResults&dateFrom=\(day)%2F\(month)%2F\(year)&dateTo=\(nextDay)%2F\(nextMonth)%2F\(nextYear)&typeFlight=oneway&one_per_date=0&oneforcity=1&wait_for_refresh=0&adults=1&limit=5&partner=skypicker"
+        
+        print(url)
         
         NetworkManager.shared.dataRequest(with: url, objectType: RecRequest.self) { [weak self] result in
             DispatchQueue.main.async {

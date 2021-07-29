@@ -19,6 +19,10 @@ struct HomeView: View {
         animation: .default)
     private var items: FetchedResults<Item>
     
+    init() {
+        UITableView.appearance().showsVerticalScrollIndicator = false
+    }
+    
     
     var body: some View {
         NavigationView {
@@ -34,14 +38,14 @@ struct HomeView: View {
                     Spacer()
                     Text("No flights are available")
                     Spacer()
-
+                    
                 case .loading:
                     Spacer()
                     HStack {
                         ProgressView()
                     }
                     Spacer()
-
+                    
                 case .error:
                     Spacer()
                     Text("Error occured")
