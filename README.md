@@ -4,7 +4,6 @@
 
 A simple iOS app that shows 5 interesting flights to destinations you can visit
 - Day offers are limited to 5 per day and are not be repeated, that means that on the next day the app will display different set of flights/destinations
-
 ## Run Locally
 
 Clone the project
@@ -16,13 +15,11 @@ Clone the project
 Go to the project directory
 
 - Open Top5.xcodeproj file
-- Press Run button or go to Product -> Run (cmd+R)
+- Press Run button or go to Product -> Run (⌘cmd + R)
 - Enjoy
-
 ## Running Tests
 
 To run tests, open Xcode and press (⌘cmd + U)
-
 ## API Reference
 
 #### Get popular recommendations
