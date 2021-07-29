@@ -30,25 +30,25 @@ To run tests, open Xcode and press (⌘cmd + U)
 
 | Parameter | Value     |
 | :-------- | :------- |
-| `v`       | `3` | 
-| `sort`    | `popularity` | 
-| `asc`     | `0` | 
-| `locale`  | `en` | 
-| `adults`  | `0` | 
-| `children`| `0` | 
-| `infants` | `0` | 
-| `flyFrom` | `49.2-16.61-250km` | 
-| `to`      | `anywhere` | 
-| `featureName`     | `aggregateResults` | 
-| `dateFrom`        | `06/09/2021` | 
-| `dateTo`          | `06/09/2021` | 
-| `typeFlight`      | `oneway` | 
-| `one_per_date`    | `0` | 
-| `oneforcity`      | `1` | 
-| `wait_for_refresh`| `0` | 
-| `affilid` | `your_solution_name` | 
-| `limit`   | `5` | 
-| `partner` | `skypicker` |  
+| `v`       | 3 | 
+| `sort`    | popularity | 
+| `asc`     | 0 | 
+| `locale`  | en | 
+| `adults`  | 0 | 
+| `children`| 0 | 
+| `infants` | 0 | 
+| `flyFrom` | 49.2-16.61-250km | 
+| `to`      | anywhere | 
+| `featureName`     | aggregateResults | 
+| `dateFrom`        | 06/09/2021 | 
+| `dateTo`          | 06/09/2021 | 
+| `typeFlight`      | oneway | 
+| `one_per_date`    | 0 | 
+| `oneforcity`      | 1 | 
+| `wait_for_refresh`| 0 | 
+| `affilid` | your_solution_name | 
+| `limit`   | 5 | 
+| `partner` | skypicker |  
 
 
 #### Get destination citi image

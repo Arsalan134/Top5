@@ -1,5 +1,5 @@
 //
-//  HomeModelView.swift
+//  HomeViewModel.swift
 //  Top5
 //
 //  Created by Arsalan Iravani on 27.07.2021.
@@ -46,10 +46,6 @@ class HomeViewModel: ObservableObject {
                 self?.isRefreshShowing = false
             }
         }
-        
-    }
-    
-    init() {
         
     }
     

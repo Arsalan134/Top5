@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9932CFB426B0550700047DA3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9932CFB326B0550700047DA3 /* NetworkManager.swift */; };
-		9932CFB626B05DD300047DA3 /* HomeModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9932CFB526B05DD300047DA3 /* HomeModelView.swift */; };
+		9932CFB626B05DD300047DA3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9932CFB526B05DD300047DA3 /* HomeViewModel.swift */; };
 		9932CFBA26B085AF00047DA3 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9932CFB926B085AF00047DA3 /* Functions.swift */; };
 		99D7997426B01B3700265C19 /* Top5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D7997326B01B3700265C19 /* Top5App.swift */; };
 		99D7997626B01B3700265C19 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D7997526B01B3700265C19 /* HomeView.swift */; };
@@ -43,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		9932CFB326B0550700047DA3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		9932CFB526B05DD300047DA3 /* HomeModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelView.swift; sourceTree = "<group>"; };
+		9932CFB526B05DD300047DA3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9932CFB926B085AF00047DA3 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		99D7997026B01B3700265C19 /* Top5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Top5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D7997326B01B3700265C19 /* Top5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top5App.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 		99D799A726B0515B00265C19 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				9932CFB526B05DD300047DA3 /* HomeModelView.swift */,
+				9932CFB526B05DD300047DA3 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 				99D799AB26B0523200265C19 /* RecommendationView.swift in Sources */,
 				9932CFBA26B085AF00047DA3 /* Functions.swift in Sources */,
 				99D7997D26B01B3A00265C19 /* Persistence.swift in Sources */,
-				9932CFB626B05DD300047DA3 /* HomeModelView.swift in Sources */,
+				9932CFB626B05DD300047DA3 /* HomeViewModel.swift in Sources */,
 				9932CFB426B0550700047DA3 /* NetworkManager.swift in Sources */,
 				99D7998026B01B3A00265C19 /* Top5.xcdatamodeld in Sources */,
 				99D7997626B01B3700265C19 /* HomeView.swift in Sources */,

@@ -112,6 +112,7 @@ struct Recommendation: Decodable, Identifiable {
     var quality: Double?
     var popularity: Double?
     var distance: Double?
+    
     //    var duration {
     //        var departure: Double?
     //        var `return`: Double?
