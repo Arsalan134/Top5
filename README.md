@@ -24,7 +24,7 @@ Go to the project directory
   
 ## Running Tests
 
-To run tests, open XCode and press cmd+U
+To run tests, open Xcode and press cmd+U
 
 ## Authors
 
