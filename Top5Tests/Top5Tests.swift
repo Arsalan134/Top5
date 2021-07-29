@@ -10,24 +10,18 @@ import XCTest
 
 class Top5Tests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var vm: HomeViewModel!
+    
+    override func setUp()  {
+        vm = HomeViewModel()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testRecommendationViewModel() {
+        let recommendation = Recommendation(id: "Test Name", flyFrom: "", flyTo: "", cityFrom: "", cityCodeFrom: "", cityTo: "", cityCodeTo: "", countryFrom: nil, countryTo: nil, dTime: 0, dTimeUTC: 0, aTime: 0, aTimeUTC: 0, type_flights: [], nightsInDest: 0, quality: 0, popularity: 0, distance: 0, fly_duration: "", price: 0, routes: [], airlines: [], route: [], facilitated_booking_available: false, pnr_count: 0, has_airport_change: false, technical_stops: 0, virtual_interlining: false, mapIdfrom: "", mapIdto: "", hashtags: [], transfers: [], p1: 0, p2: 0, p3: 0)
+        
+        
+        
+        XCTAssertEqual(recommendation.id, "Test Name")
+        
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
