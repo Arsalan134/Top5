@@ -1,7 +1,5 @@
-
 ![Logo](https://images.kiwi.com/common/kiwicom-logo.svg)
 
-    
 # Top5
 
 A simple iOS app that shows 5 interesting flights to destinations you can visit
@@ -21,20 +19,59 @@ Go to the project directory
 - Press Run button or go to Product -> Run (cmd+R)
 - Enjoy
 
-  
 ## Running Tests
 
-To run tests, open XCode and press cmd+U
+To run tests, open Xcode and press (⌘cmd + U)
+
+## API Reference
+
+#### Get popular recommendations
+
+```http
+  GET https://api.skypicker.com/flights
+```
+
+| Parameter | Value     |
+| :-------- | :------- |
+| `v`       | `3` | 
+| `sort`    | `popularity` | 
+| `asc`     | `0` | 
+| `locale`  | `en` | 
+| `adults`  | `0` | 
+| `children`| `0` | 
+| `infants` | `0` | 
+| `flyFrom` | `49.2-16.61-250km` | 
+| `to`      | `anywhere` | 
+| `featureName`     | `aggregateResults` | 
+| `dateFrom`        | `06/09/2021` | 
+| `dateTo`          | `06/09/2021` | 
+| `typeFlight`      | `oneway` | 
+| `one_per_date`    | `0` | 
+| `oneforcity`      | `1` | 
+| `wait_for_refresh`| `0` | 
+| `affilid` | `your_solution_name` | 
+| `limit`   | `5` | 
+| `partner` | `skypicker` |  
+
+
+#### Get destination citi image
+
+```http
+  https://images.kiwi.com/photos/600x330/citiName.jpg
+```
+
+| Parameter | Description     |
+| :-------- | :------- |
+| `citiName`| Destination citi name mapIdTo keyword  | 
+
+
+
+## Documentation
+
+Documentation of the API and its returned data is here:
+https://docs.kiwi.com/#header-kiwi.com-api
+
 
 ## Authors
 
 - [@Arsalan](https://www.github.com/arsalan134)
-
-  
-## Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
-  

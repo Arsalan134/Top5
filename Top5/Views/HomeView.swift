@@ -19,19 +19,54 @@ struct HomeView: View {
         animation: .default)
     private var items: FetchedResults<Item>
     
-   
+    
     var body: some View {
         NavigationView {
-            List(vm.recommendations) { recommendation in
-                RecommendationView(recommendation: recommendation, image: UIImage())
+            
+            Group {
+                switch vm.recommendationProgressState {
+                case .none:
+                    List(vm.recommendations) { recommendation in
+                        RecommendationView(recommendation: recommendation, image: UIImage())
+                    }
+                    
+                case .empty:
+                    Spacer()
+                    Text("No flights are available")
+                    Spacer()
+
+                case .loading:
+                    Spacer()
+                    HStack {
+                        ProgressView()
+                    }
+                    Spacer()
+
+                case .error:
+                    Spacer()
+                    Text("Error occured")
+                    Spacer()
+                }
             }
+            .navigationBarBackButtonHidden(true)
             .navigationTitle("✈️ Flight Offers ")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        vm.refreshButtonPressed()
+                    } label: {
+                        Image(systemName: "arrow.clockwise")
+                    }
+                }
+            }
+            
         }
         .onAppear {
             vm.downloadRecommendations()
         }
     }
-
+    
+    
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
@@ -63,13 +98,6 @@ struct HomeView: View {
         }
     }
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
