@@ -14,7 +14,6 @@ enum NetworkError: Error {
     case invalidStatusCode(Int)
 }
 
-
 class NetworkManager {
     
     enum Enviroment {
@@ -47,7 +46,6 @@ class NetworkManager {
         case failure(NetworkError)
     }
     
-    
     // DataRequest which sends request to given URL and convert to Decodable Object
     func dataRequest<T: Decodable>(with url: String, objectType: T.Type, completion: @escaping (Result<T>) -> Void) {
         
@@ -75,7 +73,6 @@ class NetworkManager {
             }
             
             do {
-                //create decodable object from data
                 let decodedObject = try JSONDecoder().decode(objectType.self, from: data)
                 completion(.success(decodedObject))
             } catch let error {
@@ -84,35 +81,6 @@ class NetworkManager {
         })
         
         task.resume()
-        
-        //        AF.request(completeUrl("cities"), method: .get, parameters: emptyParameters, encoder: JSONParameterEncoder.default, headers: ["Content-Type": "application/json", "Authorization": "Bearer \(User.getToken() ?? "")"]).responseJSON { response in
-        
-        
-        //            guard let data = response.data, let statusCode = response.response?.statusCode else {
-        //                return
-        //            }
-        
-        //            switch statusCode {
-        //            case 200:
-        //                do {
-        //                    let json = try JSON(data: data)
-        //                    print(json)
-        //                    if let userDictionary = json["results"].arrayObject {
-        //                        let jsonData = try JSONSerialization.data(withJSONObject: userDictionary, options: [])
-        //                        let cities: [City] = try self.decoder.decode([City].self, from: jsonData)
-        //                        completed(.success(cities))
-        //
-        //                    } else {
-        //                        print("Cannot convert to dictionary")
-        //                    }
-        //                } catch {
-        //                    print(error.localizedDescription)
-        //                }
-        //            default:
-        //                let errors = self.convertErrorMessage(data: response.data)
-        //                completed(.failure(errors))
-        //            }
-        
         
     }
 }

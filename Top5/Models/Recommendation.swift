@@ -64,7 +64,7 @@ struct CountryFromTo: Decodable {
     var name: String?
 }
 
-func unixDateToDateString(_ dateInSeconds: Int?) -> String {
+func unixDateToDateString(_ dateInSeconds: Int?, withFormat format: String) -> String {
     
     guard dateInSeconds != nil else {
         return ""
@@ -73,24 +73,7 @@ func unixDateToDateString(_ dateInSeconds: Int?) -> String {
     let date = Date(timeIntervalSince1970: TimeInterval(dateInSeconds ?? 0))
     
     let dateFormatter = DateFormatter()
-    dateFormatter.setLocalizedDateFormatFromTemplate("MMM d")
-    dateFormatter.timeZone = .current
-    
-    let localDate = dateFormatter.string(from: date)
-    
-    return localDate
-}
-
-func unixDateToTimeString(_ timeInSeconds: Int?) -> String {
-    
-    guard timeInSeconds != nil else {
-        return ""
-    }
-    
-    let date = Date(timeIntervalSince1970: TimeInterval(timeInSeconds ?? 0))
-    
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "HH:mm"
+    dateFormatter.setLocalizedDateFormatFromTemplate(format)
     dateFormatter.timeZone = .current
     
     let localDate = dateFormatter.string(from: date)
@@ -119,7 +102,6 @@ struct Recommendation: Decodable, Identifiable {
     
     var countryFrom: CountryFromTo?
     var countryTo: CountryFromTo?
-    
     
     var dTime: Int?
     var dTimeUTC: Int?

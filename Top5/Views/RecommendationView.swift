@@ -12,7 +12,7 @@ struct RecommendationView: View {
     
     var recommendation: Recommendation
     
-    @State var image: UIImage
+    @State var image = UIImage()
     
     var body: some View {
         VStack(spacing: 5) {
@@ -72,7 +72,7 @@ struct RecommendationView: View {
                     Text("Date")
                         .foregroundColor(.gray)
                     
-                    Text(unixDateToDateString(recommendation.dTimeUTC))
+                    Text(unixDateToDateString(recommendation.dTimeUTC, withFormat: "MMM d"))
                 }
                 
                 Spacer()
@@ -90,7 +90,7 @@ struct RecommendationView: View {
                     Text("Departure")
                         .foregroundColor(.gray)
                     
-                    Text(unixDateToTimeString(recommendation.dTimeUTC))
+                    Text(unixDateToDateString(recommendation.dTimeUTC, withFormat: "HH:mm"))
                 }
                 
                 Spacer()
@@ -99,7 +99,7 @@ struct RecommendationView: View {
                     Text("Arrival")
                         .foregroundColor(.gray)
                     
-                    Text(unixDateToTimeString(recommendation.aTimeUTC))
+                    Text(unixDateToDateString(recommendation.aTimeUTC, withFormat: "HH:mm"))
                 }
             }
             .padding(.bottom, 20)
