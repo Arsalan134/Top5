@@ -7,6 +7,18 @@
 
 import Foundation
 
+struct RecRequest: Decodable {
+    var search_id: String
+    var time: Int?
+    var currency: String?
+    var fx_rate: Int?
+    var data: [Recommendation]
+}
+
+extension RecRequest: Identifiable {
+    var id: String { search_id }
+}
+
 
 class HomeViewModel: ObservableObject {
     

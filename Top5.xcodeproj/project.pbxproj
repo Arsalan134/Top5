@@ -21,7 +21,6 @@
 		99D799A926B051C500265C19 /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D799A826B051C500265C19 /* Recommendation.swift */; };
 		99D799AB26B0523200265C19 /* RecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D799AA26B0523200265C19 /* RecommendationView.swift */; };
 		99F3F3AD26B2D194005A7022 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 99F3F3AC26B2D194005A7022 /* README.md */; };
-		99F4379A26B2AD9A004E7209 /* RecommendationDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F4379926B2AD9A004E7209 /* RecommendationDetailedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +61,6 @@
 		99D799A826B051C500265C19 /* Recommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
 		99D799AA26B0523200265C19 /* RecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationView.swift; sourceTree = "<group>"; };
 		99F3F3AC26B2D194005A7022 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		99F4379926B2AD9A004E7209 /* RecommendationDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationDetailedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +174,6 @@
 			children = (
 				99D7997526B01B3700265C19 /* HomeView.swift */,
 				99D799AA26B0523200265C19 /* RecommendationView.swift */,
-				99F4379926B2AD9A004E7209 /* RecommendationDetailedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,7 +324,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99F4379A26B2AD9A004E7209 /* RecommendationDetailedView.swift in Sources */,
 				99D799A926B051C500265C19 /* Recommendation.swift in Sources */,
 				99D799AB26B0523200265C19 /* RecommendationView.swift in Sources */,
 				9932CFBA26B085AF00047DA3 /* Functions.swift in Sources */,

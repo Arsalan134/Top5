@@ -53,13 +53,10 @@ class NetworkManager {
             return
         }
         
-        //create the session object
         let session = URLSession.shared
-        
-        //now create the URLRequest object using the url object
+
         let request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 60)
         
-        //create dataTask using the session object to send data to the server
         let task = session.dataTask(with: request, completionHandler: { data, response, error in
             
             guard error == nil else {
